@@ -98,10 +98,10 @@ context = {
     'heat_start'  : str(start_Q).replace('.', ','),
     'heat_stop'   : str(stop_Q).replace('.', ','),
     'total_heat'  : str(total_Q).replace('.', ',').ljust(5, '0'),
-    'start_in'    : str(round(last_in)).replace('.', ','),
-    'start_out'   : str(round(last_out)).replace('.', ','),
-    'stop_in'     : str(round(now_in)).replace('.', ','),
-    'stop_out'    : str(round(now_out)).replace('.', ','),
+    'start_in'    : str(round(last_in)).replace('.', ',').rjust(5, '0'),
+    'start_out'   : str(round(last_out)).replace('.', ',').rjust(5, '0'),
+    'stop_in'     : str(round(now_in)).replace('.', ',').rjust(5, '0'),
+    'stop_out'    : str(round(now_out)).replace('.', ',').rjust(5, '0'),
     'total_water' : str(water_rate).replace('.', ',')
 }
 # заменяем шаблонные фразы в template.docx на нужную нам информацию
